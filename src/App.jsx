@@ -89,7 +89,7 @@ function App() {
               {questions.map((q, index) => (
                 <div key={index} className="collapse collapse-plus bg-base-200">
                   <input type="checkbox" name={`my-accordion-${index + 1}`} />
-                  <div className="collapse-title text-xl font-medium min-h-0">
+                  <div className="min-h-0 text-xl font-medium collapse-title">
                     Question {index + 1}
                   </div>
 
@@ -97,22 +97,22 @@ function App() {
                     <p>Select</p>
                     <input
                       type="checkbox"
-                      className="checkbox border-blue-500 mb-5"
+                      className="mb-5 border-blue-500 checkbox"
                       onChange={(e) => handleCheckboxChange(index, e)}
                     />
-                    <p className="text-lg question my-3">
-                      <div className="chat-bubble w-auto">
+                    <p className="my-3 text-lg question">
+                      <div className="w-auto chat-bubble">
                         <p>What is 2+2?</p>
                       </div>
                     </p>
-                    <p className="text-lg question my-3">
-                      <div className="chat-bubble w-auto">
+                    <p className="my-3 text-lg question">
+                      <div className="w-auto chat-bubble">
                         <p>a) Is It 4?</p>
                         <p>b) Is It 6?</p>
                       </div>
                     </p>
-                    <p className="text-lg question my-3">
-                      <div className="chat-bubble w-auto">
+                    <p className="my-3 text-lg question">
+                      <div className="w-auto chat-bubble">
                         <p>2+2 is 4</p>
                       </div>
                     </p>
@@ -122,7 +122,7 @@ function App() {
             </div>
           </div>
           <button
-            className="btn btn-accent text-white text-center mt-5"
+            className="mt-5 text-center text-white btn btn-accent"
             onClick={generateDocument}
           >
             Generate DOCX
